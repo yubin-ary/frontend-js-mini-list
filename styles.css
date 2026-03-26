@@ -1,0 +1,141 @@
+/* 픽셀 영어 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/* 한글 픽셀 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/DungGeunMo.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #5c94fc;
+  font-family: "Press Start 2P", "DungGeunMo", "Noto Sans KR", monospace;
+}
+
+/* 중앙 */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 카드 */
+.todo {
+  background: #fbd000;
+  padding: 30px;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0 #000;
+  width: 350px;
+}
+
+/* 제목 */
+h1 {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 입력 */
+#inputBar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#todoInput {
+  flex: 1;
+  padding: 10px;
+  border: 3px solid #000;
+  font-family: inherit;
+  font-size: 10px;
+  outline: none;
+}
+
+/* 추가 버튼 */
+#addBtn {
+  background: #e52521;
+  color: white;
+  border: 3px solid #000;
+  padding: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10px;
+  box-shadow: 3px 3px 0 #000;
+}
+
+#addBtn:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+/* 리스트 */
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 아이템 */
+#todoList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  background: #fff;
+  border: 3px solid #000;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  box-shadow: 3px 3px 0 #000;
+}
+
+/* 텍스트 */
+.todo-text {
+  flex: 1;
+}
+
+/* 완료 상태 */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* 버튼 공통 */
+.btn {
+  border: 3px solid #000;
+  background: #fff;
+  font-family: inherit;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 6px 8px;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* 체크 */
+.check-btn {
+  background: #43b047;
+  color: white;
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+
+/* 삭제 */
+.delete-btn {
+  background: #e52521;
+  color: white;
+}
+
+/* 버튼 그룹 */
+.btn-group {
+  display: flex;
+  gap: 5px;
+}
