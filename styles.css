@@ -1,17 +1,14 @@
-/* 픽셀 영어 폰트 */
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
 /* 한글 픽셀 폰트 */
-@import url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/DungGeunMo.css");
-
+@import url("https://cdn.jsdelivr.net/gh/MonadABXY/mona-font/web/mona.css");
 * {
   box-sizing: border-box;
+  font-family: "Mona12", "Noto Sans KR", monospace;
+  font-weight: 700;
 }
 
 body {
   margin: 0;
   background: #5c94fc;
-  font-family: "Press Start 2P", "DungGeunMo", "Noto Sans KR", monospace;
 }
 
 /* 중앙 */
@@ -33,7 +30,7 @@ body {
 
 /* 제목 */
 h1 {
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -126,6 +123,7 @@ h1 {
   color: white;
   width: 30px;
   aspect-ratio: 1/1;
+  font-weight: 700;
 }
 
 /* 삭제 */
