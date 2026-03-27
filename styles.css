@@ -2,7 +2,7 @@
 @import url("https://cdn.jsdelivr.net/gh/MonadABXY/mona-font/web/mona.css");
 * {
   box-sizing: border-box;
-  font-family: "Mona12", "Noto Sans KR", monospace;
+  font-family: "Mona12";
   font-weight: 700;
 }
 
