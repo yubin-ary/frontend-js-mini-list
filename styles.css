@@ -71,6 +71,37 @@ h1 {
   box-shadow: none;
 }
 
+#filterBar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  flex: 1;
+  border: 3px solid #000;
+  background: #fff4b3;
+  color: #000;
+  padding: 8px 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10px;
+  box-shadow: 3px 3px 0 #000;
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    background-color 0.12s ease;
+}
+
+.filter-btn:hover {
+  background: #fff8d6;
+}
+
+.filter-btn.active {
+  background: #43b047;
+  color: #fff;
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
 /* 리스트 */
 #todoList {
   list-style: none;
@@ -79,7 +110,7 @@ h1 {
 }
 
 /* 아이템 */
-#todoList li {
+.listItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -99,7 +130,7 @@ h1 {
 }
 
 /* 완료 상태 */
-.completed {
+.cancelLine {
   text-decoration: line-through;
   opacity: 0.6;
 }
@@ -139,4 +170,8 @@ h1 {
 .btn-group {
   display: flex;
   gap: 5px;
+}
+
+.hidden {
+  display: none;
 }
