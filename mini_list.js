@@ -1,22 +1,25 @@
 const todoList = document.querySelector("#todoList");
 const addButton = document.querySelector("#addBtn");
 const todoInput = document.querySelector("#todoInput");
-// const allTodos = document.querySelector("#allTodos");
-// const completedTodos = document.querySelector("#completedTodos");
-// const incompleteTodos = document.querySelector("#incompleteTodos");
 const filterBar = document.querySelector("#filterBar");
-const filterButtons = document.querySelectorAll(".filter-btn");
 let currentFilter = "all";
+
 // add 버튼 동작
-addButton.addEventListener("click", () => {
+addButton.addEventListener("click", async () => {
   const inputContent = handleContent();
   if (inputContent) {
+    await delay(500);
     const listItem = createListItem(inputContent);
     todoList.append(listItem);
     todoInput.value = "";
     filterTodos(currentFilter);
   }
 });
+const delay = (ms) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+};
 
 // 투두 리스트 생성
 const createListItem = (inputContent) => {
@@ -86,6 +89,10 @@ const isDone = (target) => {
 
 // 필터 버튼
 filterBar.addEventListener("click", (e) => {
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.classList.remove("active");
+  });
+  e.target.classList.add("active");
   if (e.target.id === "allTodos") {
     currentFilter = "all";
   } else if (e.target.id === "completedTodos") {
@@ -93,16 +100,8 @@ filterBar.addEventListener("click", (e) => {
   } else if (e.target.id === "incompleteTodos") {
     currentFilter = "incomplete";
   } else return;
-
-  setActiveFilterButton(e.target);
   filterTodos(currentFilter);
 });
-
-const setActiveFilterButton = (targetButton) => {
-  filterButtons.forEach((button) => {
-    button.classList.toggle("active", button === targetButton);
-  });
-};
 
 const filterTodos = (currentFilter) => {
   const listItems = Array.from(document.querySelectorAll(".listItem"));

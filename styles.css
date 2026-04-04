@@ -78,6 +78,7 @@ h1 {
 }
 
 .filter-btn {
+  appearance: none;
   flex: 1;
   border: 3px solid #000;
   background: #fff4b3;
@@ -95,7 +96,11 @@ h1 {
   background: #fff8d6;
 }
 
+.filter-btn:focus,
+.filter-btn:focus-visible,
+.filter-btn:active,
 .filter-btn.active {
+  outline: none;
   background: #43b047;
   color: #fff;
   transform: translate(3px, 3px);
